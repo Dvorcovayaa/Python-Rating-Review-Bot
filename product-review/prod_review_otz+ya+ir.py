@@ -3,7 +3,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 from telebot import types
-bot=telebot.TeleBot('5806559841:AAEDsW87-mtdQS1fFNTIh1kpkujFPlTriQ8', threaded=False)
+bot=telebot.TeleBot('', threaded=False)
 @bot.message_handler(commands=["start"])
 def start(message, res=False):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
