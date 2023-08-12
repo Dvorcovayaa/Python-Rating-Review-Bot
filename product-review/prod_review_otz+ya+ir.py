@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup
 from telebot import types
 
 bot=telebot.TeleBot('', threaded=False)
-@bot.message_handler(commands=["start"])
 
+@bot.message_handler(commands=["start"])
 def start(message, res=False):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     item1 = types.KeyboardButton("Посмотреть рейтинг товара")
