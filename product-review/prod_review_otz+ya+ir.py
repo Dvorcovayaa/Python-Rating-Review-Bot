@@ -66,9 +66,9 @@ def irsearch(message):
         link = div.find('a', class_='reviewsLink')['href']
         image = div.find('div', class_='image')
         image = image.find('img', class_='lazy lazy-loader')['data-original']
-        
         text = (f'Наименование: {name}\nРейтинг {rating}\nСсылка: https://irecommend.ru{link}')
         bot.send_photo(message.chat.id, f'{image}', caption=text)
+        
     bot.send_message(message.chat.id, 'Желаете ещё что-нибудь проверить?')
     
 def otzsearch(message):
@@ -84,9 +84,9 @@ def otzsearch(message):
         rating=div.find('div',class_='product-rating tooltip-left hover-brace').text
         link=div.find('a',class_='reviews-counter')['href']
         image=div.find('div',class_='product-photo has-photo')['data-orig']
-        
         text=(f'Наименование:{name}\nРейтинг {rating}\nСсылка: https://otzovik.com{link}')
         bot.send_photo(message.chat.id,f'{image}',caption=text)
+        
     bot.send_message(message.chat.id, 'Желаете ещё что-нибудь проверить?')
     
 def yasearch(message):
